@@ -1,5 +1,20 @@
 <template>
-  <div></div>
+  <div class="row w-25 offset-4">
+    <div class="col">
+      <img
+        :src="$store.state.ujKarakter.karakterPicture"
+        alt="crest"
+        class="crest"
+      />
+    </div>
+    <div class="col">
+      <h6>Név: {{ $store.state.ujKarakter.karakterNev }}</h6>
+      <h6>Frakció: {{ $store.state.ujKarakter.karakterFaction }}</h6>
+      <h6>Nem: {{ $store.state.ujKarakter.karakterGender }}</h6>
+      <h6>Faj: {{ $store.state.ujKarakter.karakterRace }}</h6>
+      <h6>Kaszt: {{ $store.state.ujKarakter.karakterClass }}</h6>
+    </div>
+  </div>
 </template>
 
 <script>

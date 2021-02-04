@@ -95,7 +95,9 @@ export default {
     onClassSelect(cls) {
       this.currentlySelectedClass = cls;
       this.crestPictureString =
-        "../assets/crests/" + this.currentlySelectedClass + ".png";
+        "http://localhost:8000/media/crests/" +
+        this.currentlySelectedClass +
+        ".png";
       this.isCharacterValid =
         this.currentlySelectedFaction !== "" ||
         this.currentlySelectedRaceName !== "" ||
@@ -108,6 +110,7 @@ export default {
         kClass: this.currentlySelectedClass,
         crest: this.crestPictureString
       });
+      this.$router.push({ name: "CReady" });
     }
   }
 };
