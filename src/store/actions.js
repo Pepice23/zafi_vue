@@ -22,6 +22,7 @@ export default {
     commit(mutationTypes.SET_RACE, race);
     commit(mutationTypes.SET_CLASS, kClass);
     commit(mutationTypes.SET_CHARACTER_CREST, crest);
+    commit(mutationTypes.SET_CHARACTER_FINISHED_TRUE);
   },
   async [types.ADD_NEW_CHARACTER_TO_DB]({ state, commit }) {
     await api.createNewKarakter(

@@ -6,7 +6,9 @@ export const types = {
   SET_CLASS: "SET_CLASS",
   SET_CHARACTER_CREST: "SET_CHARACTER_CREST",
   SET_EXISTING_CHARACTER_NAMES: "SET_EXISTING_CHARACTER_NAMES",
-  RESET_NEW_CHARACTER: "RESET_NEW_CHARACTER"
+  RESET_NEW_CHARACTER: "RESET_NEW_CHARACTER",
+  SET_NAME_READY_TRUE: "SET_NAME_READY_TRUE",
+  SET_CHARACTER_FINISHED_TRUE: "SET_CHARACTER_FINISHED_TRUE"
 };
 export default {
   [types.SET_CHARACTER_NAME](state, newCharacterName) {
@@ -17,6 +19,7 @@ export default {
   },
   [types.SET_GENDER](state, gender) {
     state.ujKarakter.karakterGender = gender;
+    state.isGenderSelected = true;
   },
   [types.SET_FACTION](state, faction) {
     state.ujKarakter.karakterFaction = faction;
@@ -37,6 +40,11 @@ export default {
     state.ujKarakter.karakterRace = "";
     state.ujKarakter.karakterClass = "";
     state.ujKarakter.karakterPicture = "";
+  },
+  [types.SET_NAME_READY_TRUE](state) {
+    state.nameReady = true;
+  },
+  [types.SET_CHARACTER_FINISHED_TRUE](state) {
     state.isFinished = true;
   }
 };

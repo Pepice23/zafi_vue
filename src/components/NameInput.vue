@@ -16,7 +16,7 @@
         <button
           class="btn btn-primary mt-2"
           @click="handleClick"
-          :disabled="nameReady"
+          :disabled="$store.state.nameReady"
         >
           Karakternév ellenőrzése
         </button>
@@ -43,8 +43,7 @@ export default {
       nameError: "A név nem megfelelő! Válassz másikat.",
       creationError: "",
       creationComplete: "",
-      hasError: false,
-      nameReady: false
+      hasError: false
     };
   },
   methods: {
@@ -57,7 +56,7 @@ export default {
       if (!this.hasError) {
         this.$store.commit(mutationTypes.SET_CHARACTER_NAME, readyName);
         this.creationComplete = "A név megfelelő";
-        this.nameReady = true;
+        this.$store.commit(mutationTypes.SET_NAME_READY_TRUE);
         setTimeout(() => {
           this.creationComplete = "";
         }, 3000);

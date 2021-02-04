@@ -1,10 +1,14 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid text-center">
     <Flag />
     <NameInput />
-    <GenderSelect />
-    <RaceClassPicker />
-    <button class="btn btn-primary mt-3" @click="characterReady">
+    <GenderSelect v-if="$store.state.nameReady" />
+    <RaceClassPicker v-if="$store.state.isGenderSelected" />
+    <button
+      v-if="$store.state.isFinished"
+      class="btn btn-primary mt-3"
+      @click="characterReady"
+    >
       Mehet a játék
     </button>
   </div>

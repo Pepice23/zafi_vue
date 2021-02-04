@@ -15,7 +15,9 @@ export default new Vuex.Store({
       karakterPicture: ""
     },
     meglevoKarakterNevek: [],
-    isFinished: false
+    isFinished: false,
+    nameReady: false,
+    isGenderSelected: false
   },
   mutations,
   actions,
