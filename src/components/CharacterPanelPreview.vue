@@ -1,5 +1,5 @@
 <template>
-  <div class="row w-25 offset-4">
+  <div class="row w-50 offset-3">
     <div class="col">
       <img
         :src="$store.state.ujKarakter.karakterPicture"
@@ -8,11 +8,11 @@
       />
     </div>
     <div class="col">
-      <h6>Név: {{ $store.state.ujKarakter.karakterNev }}</h6>
-      <h6>Frakció: {{ $store.state.ujKarakter.karakterFaction }}</h6>
-      <h6>Nem: {{ $store.state.ujKarakter.karakterGender }}</h6>
-      <h6>Faj: {{ $store.state.ujKarakter.karakterRace }}</h6>
-      <h6>Kaszt: {{ $store.state.ujKarakter.karakterClass }}</h6>
+      <h3>Név: {{ $store.state.ujKarakter.karakterNev }}</h3>
+      <h3>Frakció: {{ $store.state.ujKarakter.karakterFaction }}</h3>
+      <h3>Nem: {{ $store.state.ujKarakter.karakterGender }}</h3>
+      <h3>Faj: {{ $store.state.ujKarakter.karakterRace }}</h3>
+      <h3>Kaszt: {{ $store.state.ujKarakter.karakterClass }}</h3>
     </div>
   </div>
 </template>
@@ -24,10 +24,6 @@ export default {
 </script>
 
 <style scoped>
-.miniFlag {
-  width: 50px;
-  height: 50px;
-}
 .crest {
   width: 200px;
   height: 200px;
