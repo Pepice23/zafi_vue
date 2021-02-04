@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="row text-center">
+  <div class="text-center">
+    <div class="row">
       <div class="col">
         <button
           :class="['btn', isSelectedM ? 'btn-success' : 'btn-primary']"
