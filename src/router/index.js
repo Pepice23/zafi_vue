@@ -3,7 +3,8 @@ import VueRouter from "vue-router";
 
 import MainMenu from "@/views/MainMenu";
 import CharacterCreator from "@/views/CharacterCreator";
-import CharaterPreview from "@/views/CharaterPreview";
+import CharacterPreview from "@/views/CharacterPreview";
+import CharacterList from "@/views/CharacterList";
 
 Vue.use(VueRouter);
 
@@ -18,7 +19,8 @@ const routes = [
     name: "CCreator",
     component: CharacterCreator
   },
-  { path: "/preview", name: "CReady", component: CharaterPreview }
+  { path: "/preview", name: "CReady", component: CharacterPreview },
+  { path: "/clist", name: "CList", component: CharacterList }
 ];
 
 const router = new VueRouter({
