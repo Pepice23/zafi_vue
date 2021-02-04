@@ -14,7 +14,9 @@
     </div>
     <div class="row mt-2">
       <div class="col">
-        <button class="btn btn-primary big-button">Betöltés</button>
+        <button class="btn btn-primary big-button" @click="startExisting">
+          Betöltés
+        </button>
       </div>
     </div>
   </div>
@@ -26,6 +28,9 @@ export default {
   methods: {
     startCreator() {
       this.$router.push({ name: "CCreator" });
+    },
+    startExisting() {
+      this.$router.push({ name: "CList" });
     }
   }
 };
