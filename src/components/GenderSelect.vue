@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { types as mutationTypes } from "@/store/mutations";
+import { types as mutationTypes } from "@/store/newCharacter/mutations";
 
 export default {
   name: "GenderSelect",

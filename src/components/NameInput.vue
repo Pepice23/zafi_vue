@@ -16,7 +16,7 @@
         <button
           class="btn btn-primary mt-2"
           @click="handleClick"
-          :disabled="$store.state.nameReady"
+          :disabled="$store.state.newCharacter.nameReady"
         >
           Karakternév ellenőrzése
         </button>
@@ -31,8 +31,8 @@ import {
   forbiddenNumbers,
   forbiddenSymbols
 } from "@/helpers/forbiddenNames";
-import { types as mutationTypes } from "@/store/mutations";
-import { types as actionTypes } from "@/store/actions";
+import { types as mutationTypes } from "@/store/newCharacter/mutations";
+import { types as actionTypes } from "@/store/newCharacter/actions";
 import { titleCase } from "@/helpers/helperFunctions";
 
 export default {
@@ -52,7 +52,10 @@ export default {
       this.checkNameNasty(this.characterName, forbiddenNames);
       this.checkNameNasty(this.characterName, forbiddenNumbers);
       this.checkNameNasty(this.characterName, forbiddenSymbols);
-      this.checkNameExists(readyName, this.$store.state.meglevoKarakterNevek);
+      this.checkNameExists(
+        readyName,
+        this.$store.state.newCharacter.meglevoKarakterNevek
+      );
       if (!this.hasError) {
         this.$store.commit(mutationTypes.SET_CHARACTER_NAME, readyName);
         this.creationComplete = "A név megfelelő";

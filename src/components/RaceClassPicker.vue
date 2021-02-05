@@ -58,7 +58,7 @@
           class="btn btn-primary"
           @click="onCharacterFinalize"
           :disabled="!isCharacterValid"
-          v-if="!$store.state.isFinished"
+          v-if="!$store.state.newCharacter.isFinished"
         >
           Karakter Véglegesítése!
         </button>
@@ -69,7 +69,7 @@
 
 <script>
 import { alliance, horde } from "@/helpers/lists";
-import { types as actionTypes } from "@/store/actions";
+import { types as actionTypes } from "@/store/newCharacter/actions";
 
 export default {
   name: "RaceClassPicker",

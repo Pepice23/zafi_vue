@@ -2,10 +2,10 @@
   <div class="container-fluid text-center">
     <Flag />
     <NameInput />
-    <GenderSelect v-if="$store.state.nameReady" />
-    <RaceClassPicker v-if="$store.state.isGenderSelected" />
+    <GenderSelect v-if="$store.state.newCharacter.nameReady" />
+    <RaceClassPicker v-if="$store.state.newCharacter.isGenderSelected" />
     <button
-      v-if="$store.state.isFinished"
+      v-if="$store.state.newCharacter.isFinished"
       class="btn btn-primary mt-3"
       @click="characterReady"
     >
@@ -19,7 +19,7 @@ import GenderSelect from "@/components/GenderSelect.vue";
 import NameInput from "@/components/NameInput.vue";
 import RaceClassPicker from "@/components/RaceClassPicker.vue";
 import Flag from "@/components/Flag";
-import { types as actionTypes } from "@/store/actions";
+import { types as actionTypes } from "@/store/newCharacter/actions";
 
 export default {
   name: "CharacterCreator",

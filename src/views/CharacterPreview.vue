@@ -10,7 +10,7 @@
 
 <script>
 import CharacterPanelPreview from "@/components/CharacterPanelPreview";
-import { types as actionTypes } from "@/store/actions";
+import { types as actionTypes } from "@/store/newCharacter/actions";
 export default {
   name: "CharacterPreview",
   components: { CharacterPanelPreview },
